@@ -28,13 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblNaslovApk = new System.Windows.Forms.Label();
             this.txt_Korime = new System.Windows.Forms.TextBox();
             this.txt_Datum = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblVozniRedovi = new System.Windows.Forms.Label();
             this.btn_NoviVozniRed = new System.Windows.Forms.Button();
-            this.btn_NoviAutobus = new System.Windows.Forms.Button();
+            this.btn_AzurirajVozniRed = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idvoznogredaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazivlinijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.polazisnastanicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.odredisnastanicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vrijemetrajanjaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vozniRedBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pI2324_nrastija22_DBDataSet = new TestoBus.PI2324_nrastija22_DBDataSet();
+            this.vozniRedTableAdapter = new TestoBus.PI2324_nrastija22_DBDataSetTableAdapters.VozniRedTableAdapter();
+            this.lblPretrazivanje = new System.Windows.Forms.Label();
+            this.txtPretrazivanje = new System.Windows.Forms.RichTextBox();
+            this.btnPretrazi = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vozniRedBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pI2324_nrastija22_DBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNaslovApk
@@ -49,7 +64,7 @@
             // 
             // txt_Korime
             // 
-            this.txt_Korime.Location = new System.Drawing.Point(486, 24);
+            this.txt_Korime.Location = new System.Drawing.Point(1077, 24);
             this.txt_Korime.Name = "txt_Korime";
             this.txt_Korime.Size = new System.Drawing.Size(245, 26);
             this.txt_Korime.TabIndex = 1;
@@ -57,64 +72,163 @@
             // txt_Datum
             // 
             this.txt_Datum.BackColor = System.Drawing.SystemColors.Menu;
-            this.txt_Datum.Location = new System.Drawing.Point(486, 61);
+            this.txt_Datum.Location = new System.Drawing.Point(1077, 61);
             this.txt_Datum.Name = "txt_Datum";
             this.txt_Datum.Size = new System.Drawing.Size(245, 26);
             this.txt_Datum.TabIndex = 2;
             // 
-            // label1
+            // lblVozniRedovi
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(55, 135);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 40);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Popis autobusa";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(55, 401);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(215, 40);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Vozni redovi";
+            this.lblVozniRedovi.AutoSize = true;
+            this.lblVozniRedovi.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVozniRedovi.Location = new System.Drawing.Point(55, 247);
+            this.lblVozniRedovi.Name = "lblVozniRedovi";
+            this.lblVozniRedovi.Size = new System.Drawing.Size(215, 40);
+            this.lblVozniRedovi.TabIndex = 4;
+            this.lblVozniRedovi.Text = "Vozni redovi";
             // 
             // btn_NoviVozniRed
             // 
-            this.btn_NoviVozniRed.Location = new System.Drawing.Point(289, 401);
+            this.btn_NoviVozniRed.Location = new System.Drawing.Point(1120, 197);
             this.btn_NoviVozniRed.Name = "btn_NoviVozniRed";
-            this.btn_NoviVozniRed.Size = new System.Drawing.Size(203, 40);
+            this.btn_NoviVozniRed.Size = new System.Drawing.Size(158, 40);
             this.btn_NoviVozniRed.TabIndex = 5;
             this.btn_NoviVozniRed.Text = "Novi vozni red";
             this.btn_NoviVozniRed.UseVisualStyleBackColor = true;
             // 
-            // btn_NoviAutobus
+            // btn_AzurirajVozniRed
             // 
-            this.btn_NoviAutobus.Location = new System.Drawing.Point(326, 136);
-            this.btn_NoviAutobus.Name = "btn_NoviAutobus";
-            this.btn_NoviAutobus.Size = new System.Drawing.Size(227, 39);
-            this.btn_NoviAutobus.TabIndex = 6;
-            this.btn_NoviAutobus.Text = "Novi autobus";
-            this.btn_NoviAutobus.UseVisualStyleBackColor = true;
+            this.btn_AzurirajVozniRed.Location = new System.Drawing.Point(1120, 255);
+            this.btn_AzurirajVozniRed.Name = "btn_AzurirajVozniRed";
+            this.btn_AzurirajVozniRed.Size = new System.Drawing.Size(157, 39);
+            this.btn_AzurirajVozniRed.TabIndex = 6;
+            this.btn_AzurirajVozniRed.Text = "Azuriraj vozni red";
+            this.btn_AzurirajVozniRed.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idvoznogredaDataGridViewTextBoxColumn,
+            this.nazivlinijeDataGridViewTextBoxColumn,
+            this.polazisnastanicaDataGridViewTextBoxColumn,
+            this.odredisnastanicaDataGridViewTextBoxColumn,
+            this.vrijemetrajanjaDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.vozniRedBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(57, 303);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(1265, 493);
+            this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // idvoznogredaDataGridViewTextBoxColumn
+            // 
+            this.idvoznogredaDataGridViewTextBoxColumn.DataPropertyName = "id_voznog_reda";
+            this.idvoznogredaDataGridViewTextBoxColumn.HeaderText = "id_voznog_reda";
+            this.idvoznogredaDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idvoznogredaDataGridViewTextBoxColumn.Name = "idvoznogredaDataGridViewTextBoxColumn";
+            this.idvoznogredaDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // nazivlinijeDataGridViewTextBoxColumn
+            // 
+            this.nazivlinijeDataGridViewTextBoxColumn.DataPropertyName = "naziv_linije";
+            this.nazivlinijeDataGridViewTextBoxColumn.HeaderText = "naziv_linije";
+            this.nazivlinijeDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.nazivlinijeDataGridViewTextBoxColumn.Name = "nazivlinijeDataGridViewTextBoxColumn";
+            this.nazivlinijeDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // polazisnastanicaDataGridViewTextBoxColumn
+            // 
+            this.polazisnastanicaDataGridViewTextBoxColumn.DataPropertyName = "polazisna_stanica";
+            this.polazisnastanicaDataGridViewTextBoxColumn.HeaderText = "polazisna_stanica";
+            this.polazisnastanicaDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.polazisnastanicaDataGridViewTextBoxColumn.Name = "polazisnastanicaDataGridViewTextBoxColumn";
+            this.polazisnastanicaDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // odredisnastanicaDataGridViewTextBoxColumn
+            // 
+            this.odredisnastanicaDataGridViewTextBoxColumn.DataPropertyName = "odredisna_stanica";
+            this.odredisnastanicaDataGridViewTextBoxColumn.HeaderText = "odredisna_stanica";
+            this.odredisnastanicaDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.odredisnastanicaDataGridViewTextBoxColumn.Name = "odredisnastanicaDataGridViewTextBoxColumn";
+            this.odredisnastanicaDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // vrijemetrajanjaDataGridViewTextBoxColumn
+            // 
+            this.vrijemetrajanjaDataGridViewTextBoxColumn.DataPropertyName = "vrijeme_trajanja";
+            this.vrijemetrajanjaDataGridViewTextBoxColumn.HeaderText = "vrijeme_trajanja";
+            this.vrijemetrajanjaDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.vrijemetrajanjaDataGridViewTextBoxColumn.Name = "vrijemetrajanjaDataGridViewTextBoxColumn";
+            this.vrijemetrajanjaDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // vozniRedBindingSource
+            // 
+            this.vozniRedBindingSource.DataMember = "VozniRed";
+            this.vozniRedBindingSource.DataSource = this.pI2324_nrastija22_DBDataSet;
+            // 
+            // pI2324_nrastija22_DBDataSet
+            // 
+            this.pI2324_nrastija22_DBDataSet.DataSetName = "PI2324_nrastija22_DBDataSet";
+            this.pI2324_nrastija22_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vozniRedTableAdapter
+            // 
+            this.vozniRedTableAdapter.ClearBeforeFill = true;
+            // 
+            // lblPretrazivanje
+            // 
+            this.lblPretrazivanje.AutoSize = true;
+            this.lblPretrazivanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPretrazivanje.Location = new System.Drawing.Point(481, 197);
+            this.lblPretrazivanje.Name = "lblPretrazivanje";
+            this.lblPretrazivanje.Size = new System.Drawing.Size(189, 32);
+            this.lblPretrazivanje.TabIndex = 8;
+            this.lblPretrazivanje.Text = "Pretrazivanje:";
+            // 
+            // txtPretrazivanje
+            // 
+            this.txtPretrazivanje.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txtPretrazivanje.Location = new System.Drawing.Point(487, 232);
+            this.txtPretrazivanje.Name = "txtPretrazivanje";
+            this.txtPretrazivanje.Size = new System.Drawing.Size(249, 54);
+            this.txtPretrazivanje.TabIndex = 9;
+            this.txtPretrazivanje.Text = "";
+            // 
+            // btnPretrazi
+            // 
+            this.btnPretrazi.Location = new System.Drawing.Point(742, 232);
+            this.btnPretrazi.Name = "btnPretrazi";
+            this.btnPretrazi.Size = new System.Drawing.Size(149, 55);
+            this.btnPretrazi.TabIndex = 10;
+            this.btnPretrazi.Text = "Pretraži";
+            this.btnPretrazi.UseVisualStyleBackColor = true;
+            this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(836, 830);
-            this.Controls.Add(this.btn_NoviAutobus);
+            this.ClientSize = new System.Drawing.Size(1360, 820);
+            this.Controls.Add(this.btnPretrazi);
+            this.Controls.Add(this.txtPretrazivanje);
+            this.Controls.Add(this.lblPretrazivanje);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btn_AzurirajVozniRed);
             this.Controls.Add(this.btn_NoviVozniRed);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblVozniRedovi);
             this.Controls.Add(this.txt_Datum);
             this.Controls.Add(this.txt_Korime);
             this.Controls.Add(this.lblNaslovApk);
             this.Name = "FrmMain";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vozniRedBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pI2324_nrastija22_DBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,9 +239,20 @@
         private System.Windows.Forms.Label lblNaslovApk;
         private System.Windows.Forms.TextBox txt_Korime;
         private System.Windows.Forms.TextBox txt_Datum;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblVozniRedovi;
         private System.Windows.Forms.Button btn_NoviVozniRed;
-        private System.Windows.Forms.Button btn_NoviAutobus;
+        private System.Windows.Forms.Button btn_AzurirajVozniRed;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private PI2324_nrastija22_DBDataSet pI2324_nrastija22_DBDataSet;
+        private System.Windows.Forms.BindingSource vozniRedBindingSource;
+        private PI2324_nrastija22_DBDataSetTableAdapters.VozniRedTableAdapter vozniRedTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idvoznogredaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazivlinijeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn polazisnastanicaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn odredisnastanicaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vrijemetrajanjaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label lblPretrazivanje;
+        private System.Windows.Forms.RichTextBox txtPretrazivanje;
+        private System.Windows.Forms.Button btnPretrazi;
     }
 }

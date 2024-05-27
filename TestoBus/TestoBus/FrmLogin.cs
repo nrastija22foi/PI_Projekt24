@@ -29,6 +29,9 @@ namespace TestoBus
             else if (username == "nastavnik" && password == "test")
             {
                 MessageBox.Show("Dobrodošli nastavniče!", "Uspješna prijava!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FrmMain frmMain = new FrmMain();
+                frmMain.Show();
+                this.Hide();
             }
             else
             {
