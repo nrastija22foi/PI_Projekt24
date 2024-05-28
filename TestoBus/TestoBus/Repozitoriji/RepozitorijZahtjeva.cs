@@ -7,6 +7,7 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
@@ -89,6 +90,20 @@ namespace TestoBus.Models
                 Vrijeme = vrijeme,
             };
             return novi;
+        }
+
+        public static void UnesiVozniRed(string sifraVoznog, string nazivVoznog, string polazisnaStanica, string odredisnaStanica, string vrijemeTrajanja)
+        {
+            int sifra = Convert.ToInt32(sifraVoznog);
+            int vrijeme = Convert.ToInt32(vrijemeTrajanja);
+
+            string sql = $"INSERT INTO dbo.VozniRed (id_voznog_reda, naziv_linije, polazisna_stanica, odredisna_stanica, vrijeme_trajanja) " +
+                $"VALUES ('{sifra}','{nazivVoznog}', '{polazisnaStanica}', '{odredisnaStanica}', '{vrijeme}')";
+
+
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
         }
     }
 }
