@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TestoBus.Models
 {
-    internal class VozniRed
+    public class VozniRed
     {
         public int Id { get; set; }
 

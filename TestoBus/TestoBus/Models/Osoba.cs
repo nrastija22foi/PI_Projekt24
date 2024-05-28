@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestoBus.Models
 {
-    internal class Osoba
+    public class Osoba
     {
         public int Id { get; set; }
         public string Ime { get; set; }

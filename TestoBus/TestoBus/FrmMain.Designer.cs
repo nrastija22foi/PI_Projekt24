@@ -30,26 +30,31 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lblNaslovApk = new System.Windows.Forms.Label();
-            this.txt_Korime = new System.Windows.Forms.TextBox();
+            this.txtKorime = new System.Windows.Forms.TextBox();
             this.txt_Datum = new System.Windows.Forms.TextBox();
             this.lblVozniRedovi = new System.Windows.Forms.Label();
             this.btn_NoviVozniRed = new System.Windows.Forms.Button();
             this.btn_AzurirajVozniRed = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idvoznogredaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nazivlinijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.polazisnastanicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.odredisnastanicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vrijemetrajanjaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vozniRedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pI2324_nrastija22_DBDataSet = new TestoBus.PI2324_nrastija22_DBDataSet();
             this.vozniRedTableAdapter = new TestoBus.PI2324_nrastija22_DBDataSetTableAdapters.VozniRedTableAdapter();
             this.lblPretrazivanje = new System.Windows.Forms.Label();
             this.txtPretrazivanje = new System.Windows.Forms.RichTextBox();
             this.btnPretrazi = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.vozniRedBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvVozniRedovi = new System.Windows.Forms.DataGridView();
+            this.idvoznogredaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazivlinijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.polazisnastanicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.odredisnastanicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vrijemetrajanjaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vozniRedBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnPonistiFilter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.vozniRedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pI2324_nrastija22_DBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vozniRedBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVozniRedovi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vozniRedBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNaslovApk
@@ -62,12 +67,12 @@
             this.lblNaslovApk.TabIndex = 0;
             this.lblNaslovApk.Text = "TestoBus";
             // 
-            // txt_Korime
+            // txtKorime
             // 
-            this.txt_Korime.Location = new System.Drawing.Point(1077, 24);
-            this.txt_Korime.Name = "txt_Korime";
-            this.txt_Korime.Size = new System.Drawing.Size(245, 26);
-            this.txt_Korime.TabIndex = 1;
+            this.txtKorime.Location = new System.Drawing.Point(1077, 24);
+            this.txtKorime.Name = "txtKorime";
+            this.txtKorime.Size = new System.Drawing.Size(245, 26);
+            this.txtKorime.TabIndex = 1;
             // 
             // txt_Datum
             // 
@@ -104,65 +109,6 @@
             this.btn_AzurirajVozniRed.TabIndex = 6;
             this.btn_AzurirajVozniRed.Text = "Azuriraj vozni red";
             this.btn_AzurirajVozniRed.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idvoznogredaDataGridViewTextBoxColumn,
-            this.nazivlinijeDataGridViewTextBoxColumn,
-            this.polazisnastanicaDataGridViewTextBoxColumn,
-            this.odredisnastanicaDataGridViewTextBoxColumn,
-            this.vrijemetrajanjaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.vozniRedBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(57, 303);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1265, 493);
-            this.dataGridView1.TabIndex = 7;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // idvoznogredaDataGridViewTextBoxColumn
-            // 
-            this.idvoznogredaDataGridViewTextBoxColumn.DataPropertyName = "id_voznog_reda";
-            this.idvoznogredaDataGridViewTextBoxColumn.HeaderText = "id_voznog_reda";
-            this.idvoznogredaDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.idvoznogredaDataGridViewTextBoxColumn.Name = "idvoznogredaDataGridViewTextBoxColumn";
-            this.idvoznogredaDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // nazivlinijeDataGridViewTextBoxColumn
-            // 
-            this.nazivlinijeDataGridViewTextBoxColumn.DataPropertyName = "naziv_linije";
-            this.nazivlinijeDataGridViewTextBoxColumn.HeaderText = "naziv_linije";
-            this.nazivlinijeDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.nazivlinijeDataGridViewTextBoxColumn.Name = "nazivlinijeDataGridViewTextBoxColumn";
-            this.nazivlinijeDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // polazisnastanicaDataGridViewTextBoxColumn
-            // 
-            this.polazisnastanicaDataGridViewTextBoxColumn.DataPropertyName = "polazisna_stanica";
-            this.polazisnastanicaDataGridViewTextBoxColumn.HeaderText = "polazisna_stanica";
-            this.polazisnastanicaDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.polazisnastanicaDataGridViewTextBoxColumn.Name = "polazisnastanicaDataGridViewTextBoxColumn";
-            this.polazisnastanicaDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // odredisnastanicaDataGridViewTextBoxColumn
-            // 
-            this.odredisnastanicaDataGridViewTextBoxColumn.DataPropertyName = "odredisna_stanica";
-            this.odredisnastanicaDataGridViewTextBoxColumn.HeaderText = "odredisna_stanica";
-            this.odredisnastanicaDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.odredisnastanicaDataGridViewTextBoxColumn.Name = "odredisnastanicaDataGridViewTextBoxColumn";
-            this.odredisnastanicaDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // vrijemetrajanjaDataGridViewTextBoxColumn
-            // 
-            this.vrijemetrajanjaDataGridViewTextBoxColumn.DataPropertyName = "vrijeme_trajanja";
-            this.vrijemetrajanjaDataGridViewTextBoxColumn.HeaderText = "vrijeme_trajanja";
-            this.vrijemetrajanjaDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.vrijemetrajanjaDataGridViewTextBoxColumn.Name = "vrijemetrajanjaDataGridViewTextBoxColumn";
-            this.vrijemetrajanjaDataGridViewTextBoxColumn.Width = 150;
             // 
             // vozniRedBindingSource
             // 
@@ -207,28 +153,109 @@
             this.btnPretrazi.UseVisualStyleBackColor = true;
             this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
             // 
+            // vozniRedBindingSource1
+            // 
+            this.vozniRedBindingSource1.DataMember = "VozniRed";
+            this.vozniRedBindingSource1.DataSource = this.pI2324_nrastija22_DBDataSet;
+            // 
+            // dgvVozniRedovi
+            // 
+            this.dgvVozniRedovi.AutoGenerateColumns = false;
+            this.dgvVozniRedovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVozniRedovi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idvoznogredaDataGridViewTextBoxColumn,
+            this.nazivlinijeDataGridViewTextBoxColumn,
+            this.polazisnastanicaDataGridViewTextBoxColumn,
+            this.odredisnastanicaDataGridViewTextBoxColumn,
+            this.vrijemetrajanjaDataGridViewTextBoxColumn});
+            this.dgvVozniRedovi.DataSource = this.vozniRedBindingSource;
+            this.dgvVozniRedovi.Location = new System.Drawing.Point(63, 305);
+            this.dgvVozniRedovi.Name = "dgvVozniRedovi";
+            this.dgvVozniRedovi.RowHeadersWidth = 62;
+            this.dgvVozniRedovi.RowTemplate.Height = 28;
+            this.dgvVozniRedovi.Size = new System.Drawing.Size(1258, 480);
+            this.dgvVozniRedovi.TabIndex = 11;
+            // 
+            // idvoznogredaDataGridViewTextBoxColumn
+            // 
+            this.idvoznogredaDataGridViewTextBoxColumn.DataPropertyName = "id_voznog_reda";
+            this.idvoznogredaDataGridViewTextBoxColumn.HeaderText = "id_voznog_reda";
+            this.idvoznogredaDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idvoznogredaDataGridViewTextBoxColumn.Name = "idvoznogredaDataGridViewTextBoxColumn";
+            this.idvoznogredaDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // nazivlinijeDataGridViewTextBoxColumn
+            // 
+            this.nazivlinijeDataGridViewTextBoxColumn.DataPropertyName = "naziv_linije";
+            this.nazivlinijeDataGridViewTextBoxColumn.HeaderText = "naziv_linije";
+            this.nazivlinijeDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.nazivlinijeDataGridViewTextBoxColumn.Name = "nazivlinijeDataGridViewTextBoxColumn";
+            this.nazivlinijeDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // polazisnastanicaDataGridViewTextBoxColumn
+            // 
+            this.polazisnastanicaDataGridViewTextBoxColumn.DataPropertyName = "polazisna_stanica";
+            this.polazisnastanicaDataGridViewTextBoxColumn.HeaderText = "polazisna_stanica";
+            this.polazisnastanicaDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.polazisnastanicaDataGridViewTextBoxColumn.Name = "polazisnastanicaDataGridViewTextBoxColumn";
+            this.polazisnastanicaDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // odredisnastanicaDataGridViewTextBoxColumn
+            // 
+            this.odredisnastanicaDataGridViewTextBoxColumn.DataPropertyName = "odredisna_stanica";
+            this.odredisnastanicaDataGridViewTextBoxColumn.HeaderText = "odredisna_stanica";
+            this.odredisnastanicaDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.odredisnastanicaDataGridViewTextBoxColumn.Name = "odredisnastanicaDataGridViewTextBoxColumn";
+            this.odredisnastanicaDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // vrijemetrajanjaDataGridViewTextBoxColumn
+            // 
+            this.vrijemetrajanjaDataGridViewTextBoxColumn.DataPropertyName = "vrijeme_trajanja";
+            this.vrijemetrajanjaDataGridViewTextBoxColumn.HeaderText = "vrijeme_trajanja";
+            this.vrijemetrajanjaDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.vrijemetrajanjaDataGridViewTextBoxColumn.Name = "vrijemetrajanjaDataGridViewTextBoxColumn";
+            this.vrijemetrajanjaDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // vozniRedBindingSource2
+            // 
+            this.vozniRedBindingSource2.DataMember = "VozniRed";
+            this.vozniRedBindingSource2.DataSource = this.pI2324_nrastija22_DBDataSet;
+            // 
+            // btnPonistiFilter
+            // 
+            this.btnPonistiFilter.Location = new System.Drawing.Point(742, 182);
+            this.btnPonistiFilter.Name = "btnPonistiFilter";
+            this.btnPonistiFilter.Size = new System.Drawing.Size(148, 46);
+            this.btnPonistiFilter.TabIndex = 12;
+            this.btnPonistiFilter.Text = "Poništi";
+            this.btnPonistiFilter.UseVisualStyleBackColor = true;
+            this.btnPonistiFilter.Click += new System.EventHandler(this.btnPonistiFilter_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1360, 820);
+            this.Controls.Add(this.btnPonistiFilter);
+            this.Controls.Add(this.dgvVozniRedovi);
             this.Controls.Add(this.btnPretrazi);
             this.Controls.Add(this.txtPretrazivanje);
             this.Controls.Add(this.lblPretrazivanje);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_AzurirajVozniRed);
             this.Controls.Add(this.btn_NoviVozniRed);
             this.Controls.Add(this.lblVozniRedovi);
             this.Controls.Add(this.txt_Datum);
-            this.Controls.Add(this.txt_Korime);
+            this.Controls.Add(this.txtKorime);
             this.Controls.Add(this.lblNaslovApk);
             this.Name = "FrmMain";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FrmMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vozniRedBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pI2324_nrastija22_DBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vozniRedBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVozniRedovi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vozniRedBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,22 +264,25 @@
         #endregion
 
         private System.Windows.Forms.Label lblNaslovApk;
-        private System.Windows.Forms.TextBox txt_Korime;
+        private System.Windows.Forms.TextBox txtKorime;
         private System.Windows.Forms.TextBox txt_Datum;
         private System.Windows.Forms.Label lblVozniRedovi;
         private System.Windows.Forms.Button btn_NoviVozniRed;
         private System.Windows.Forms.Button btn_AzurirajVozniRed;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private PI2324_nrastija22_DBDataSet pI2324_nrastija22_DBDataSet;
         private System.Windows.Forms.BindingSource vozniRedBindingSource;
         private PI2324_nrastija22_DBDataSetTableAdapters.VozniRedTableAdapter vozniRedTableAdapter;
+        private System.Windows.Forms.Label lblPretrazivanje;
+        private System.Windows.Forms.RichTextBox txtPretrazivanje;
+        private System.Windows.Forms.Button btnPretrazi;
+        private System.Windows.Forms.BindingSource vozniRedBindingSource1;
+        private System.Windows.Forms.DataGridView dgvVozniRedovi;
         private System.Windows.Forms.DataGridViewTextBoxColumn idvoznogredaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivlinijeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn polazisnastanicaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn odredisnastanicaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vrijemetrajanjaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label lblPretrazivanje;
-        private System.Windows.Forms.RichTextBox txtPretrazivanje;
-        private System.Windows.Forms.Button btnPretrazi;
+        private System.Windows.Forms.BindingSource vozniRedBindingSource2;
+        private System.Windows.Forms.Button btnPonistiFilter;
     }
 }

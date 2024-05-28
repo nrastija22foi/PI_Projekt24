@@ -63,7 +63,12 @@
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Osoba.cs" />
-    <Compile Include="Models\ReporizorijZahtjeva.cs" />
+    <Compile Include="Models\Zaposlenik.cs" />
+    <Compile Include="PI2324_nrastija22_DBDataSet.cs">
+      <DependentUpon>PI2324_nrastija22_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Repozitoriji\RepozitorijRadnik.cs" />
+    <Compile Include="Repozitoriji\RepozitorijZahtjeva.cs" />
     <Compile Include="Models\VozniRed.cs" />
     <Compile Include="PI2324_nrastija22_DBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TestoBus.Models;
+using TestoBus.Repozitoriji;
 
 namespace TestoBus
 {
     public partial class FrmLogin : Form
     {
+        public static Zaposlenik LoggedWorker { get; set; }
         public FrmLogin()
         {
             InitializeComponent();
@@ -19,23 +22,29 @@ namespace TestoBus
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-
-            if (username == "" || password == "")
+            if (txtUsername.Text == "")
             {
-                MessageBox.Show("Popunite sva polja", "Pogreška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Korisničko ime nije uneseno!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (username == "nastavnik" && password == "test")
+            else if (txtPassword.Text == "")
             {
-                MessageBox.Show("Dobrodošli nastavniče!", "Uspješna prijava!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                FrmMain frmMain = new FrmMain();
-                frmMain.Show();
-                this.Hide();
+                MessageBox.Show("Lozinka nije unesena!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Korisničko ime ili lozinka nisu ispravni!", "Neuspjela prijava!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LoggedWorker = RepozitorijRadnik.DohvatiRadnika(txtUsername.Text);
+                if (LoggedWorker != null && LoggedWorker.Password == txtPassword.Text)
+                {
+                    FrmMain pregledZahtjeva = new FrmMain();
+                    Hide();
+                    MessageBox.Show("Uspješno logiranje!", "Dobrodošli", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    pregledZahtjeva.ShowDialog();
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Krivi podaci!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
