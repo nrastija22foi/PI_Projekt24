@@ -14,7 +14,7 @@ namespace TestoBus
 {
     public partial class FrmInsert : Form
     {
-        private VozniRed NoviUnos;
+        
         public FrmInsert()
         {
             InitializeComponent();
@@ -32,7 +32,15 @@ namespace TestoBus
 
         private void btnUnos_Click(object sender, EventArgs e)
         {
-           
+            string sifraVoznog = txtSifra.Text;
+            string nazivVoznog = txtNazivLinije.Text;
+            string polazisnaStanica = txtPolazisna.Text;
+            string odredisnaStanica = txtOdredisna.Text;
+            string vrijemeTrajanja = txtVrijeme.Text;
+
+            RepozitorijZahtjeva.UnesiVozniRed(sifraVoznog, nazivVoznog, polazisnaStanica, odredisnaStanica, vrijemeTrajanja);
+
+            this.Close();
         }
     }
 }

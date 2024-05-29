@@ -93,6 +93,12 @@ namespace TestoBus
                 dgvVozniRedovi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             }
         }
+
+        private void btn_NoviVozniRed_Click(object sender, EventArgs e)
+        {
+            FrmInsert frmInsert = new FrmInsert();
+            frmInsert.ShowDialog(); 
+        }
     }
 
         

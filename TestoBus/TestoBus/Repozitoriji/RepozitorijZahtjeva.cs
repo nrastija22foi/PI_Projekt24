@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Text;
@@ -91,19 +92,28 @@ namespace TestoBus.Models
             };
             return novi;
         }
-
+      
         public static void UnesiVozniRed(string sifraVoznog, string nazivVoznog, string polazisnaStanica, string odredisnaStanica, string vrijemeTrajanja)
         {
             int sifra = Convert.ToInt32(sifraVoznog);
             int vrijeme = Convert.ToInt32(vrijemeTrajanja);
 
-            string sql = $"INSERT INTO dbo.VozniRed (id_voznog_reda, naziv_linije, polazisna_stanica, odredisna_stanica, vrijeme_trajanja) " +
-                $"VALUES ('{sifra}','{nazivVoznog}', '{polazisnaStanica}', '{odredisnaStanica}', '{vrijeme}')";
+           
+                string sql = $"INSERT INTO dbo.VozniRed (id_voznog_reda, naziv_linije, polazisna_stanica, odredisna_stanica, vrijeme_trajanja) " +
+                $"VALUES ({sifra}, '{nazivVoznog}', '{polazisnaStanica}', '{odredisnaStanica}', {vrijeme})";
 
-
-            DB.OpenConnection();
-            DB.ExecuteCommand(sql);
-            DB.CloseConnection();
+                try
+                {
+                    DB.OpenConnection();
+                    DB.ExecuteCommand(sql);
+                    DB.CloseConnection();
+                    MessageBox.Show($"Unos voznog reda sa šifrom {sifra} je uspešan.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Greška prilikom unosa voznog reda: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            
         }
     }
 }

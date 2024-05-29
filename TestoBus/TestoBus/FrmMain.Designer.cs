@@ -100,6 +100,7 @@
             this.btn_NoviVozniRed.TabIndex = 5;
             this.btn_NoviVozniRed.Text = "Novi vozni red";
             this.btn_NoviVozniRed.UseVisualStyleBackColor = true;
+            this.btn_NoviVozniRed.Click += new System.EventHandler(this.btn_NoviVozniRed_Click);
             // 
             // btn_AzurirajVozniRed
             // 
