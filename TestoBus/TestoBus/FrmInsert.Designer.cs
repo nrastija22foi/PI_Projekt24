@@ -34,7 +34,7 @@
             this.lblPolazišna = new System.Windows.Forms.Label();
             this.lblNazivLinije = new System.Windows.Forms.Label();
             this.lblSifra = new System.Windows.Forms.Label();
-            this.txt_Datum = new System.Windows.Forms.TextBox();
+            this.txtDatum = new System.Windows.Forms.TextBox();
             this.txtKorime = new System.Windows.Forms.TextBox();
             this.lblNaslovApk = new System.Windows.Forms.Label();
             this.txtSifra = new System.Windows.Forms.TextBox();
@@ -99,13 +99,13 @@
             this.lblSifra.TabIndex = 5;
             this.lblSifra.Text = "Šifra voznog reda:";
             // 
-            // txt_Datum
+            // txtDatum
             // 
-            this.txt_Datum.BackColor = System.Drawing.SystemColors.Menu;
-            this.txt_Datum.Location = new System.Drawing.Point(675, 79);
-            this.txt_Datum.Name = "txt_Datum";
-            this.txt_Datum.Size = new System.Drawing.Size(245, 26);
-            this.txt_Datum.TabIndex = 8;
+            this.txtDatum.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtDatum.Location = new System.Drawing.Point(675, 79);
+            this.txtDatum.Name = "txtDatum";
+            this.txtDatum.Size = new System.Drawing.Size(245, 26);
+            this.txtDatum.TabIndex = 8;
             // 
             // txtKorime
             // 
@@ -171,7 +171,7 @@
             this.Controls.Add(this.txtPolazisna);
             this.Controls.Add(this.txtNazivLinije);
             this.Controls.Add(this.txtSifra);
-            this.Controls.Add(this.txt_Datum);
+            this.Controls.Add(this.txtDatum);
             this.Controls.Add(this.txtKorime);
             this.Controls.Add(this.lblNaslovApk);
             this.Controls.Add(this.lblSifra);
@@ -196,7 +196,7 @@
         private System.Windows.Forms.Label lblPolazišna;
         private System.Windows.Forms.Label lblNazivLinije;
         private System.Windows.Forms.Label lblSifra;
-        private System.Windows.Forms.TextBox txt_Datum;
+        private System.Windows.Forms.TextBox txtDatum;
         private System.Windows.Forms.TextBox txtKorime;
         private System.Windows.Forms.Label lblNaslovApk;
         private System.Windows.Forms.TextBox txtSifra;

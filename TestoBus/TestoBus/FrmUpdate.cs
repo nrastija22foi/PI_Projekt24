@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TestoBus.Models;
+using TestoBus.Repozitoriji;
 
 namespace TestoBus
 {
@@ -25,8 +26,15 @@ namespace TestoBus
             vozni.Odredisna = oznaceni.Odredisna;
             vozni.Vrijeme = oznaceni.Vrijeme;
 
+            UcitajZaposlenika();
             PrikazVoznogReda();
         }
+        public void UcitajZaposlenika()
+        {
+            txtKorime.Text = RepozitorijRadnik.ImePrezime();
+            txtDatum.Text = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss");
+        }
+
 
         private void PrikazVoznogReda()
         {

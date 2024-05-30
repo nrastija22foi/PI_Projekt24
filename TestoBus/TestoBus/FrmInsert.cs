@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using TestoBus.Models;
+using TestoBus.Repozitoriji;
 
 namespace TestoBus
 {
@@ -18,6 +19,13 @@ namespace TestoBus
         public FrmInsert()
         {
             InitializeComponent();
+            UcitajZaposlenika();
+        }
+
+        public void UcitajZaposlenika()
+        {
+            txtKorime.Text = RepozitorijRadnik.ImePrezime();
+            txtDatum.Text = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss");
         }
 
         private void label1_Click(object sender, EventArgs e)

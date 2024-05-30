@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.lblNaslovApk = new System.Windows.Forms.Label();
             this.txtKorime = new System.Windows.Forms.TextBox();
-            this.txt_Datum = new System.Windows.Forms.TextBox();
+            this.txtDatum = new System.Windows.Forms.TextBox();
             this.lblVozniRedovi = new System.Windows.Forms.Label();
             this.btn_NoviVozniRed = new System.Windows.Forms.Button();
             this.btn_AzurirajVozniRed = new System.Windows.Forms.Button();
@@ -74,13 +74,13 @@
             this.txtKorime.Size = new System.Drawing.Size(245, 26);
             this.txtKorime.TabIndex = 1;
             // 
-            // txt_Datum
+            // txtDatum
             // 
-            this.txt_Datum.BackColor = System.Drawing.SystemColors.Menu;
-            this.txt_Datum.Location = new System.Drawing.Point(1077, 61);
-            this.txt_Datum.Name = "txt_Datum";
-            this.txt_Datum.Size = new System.Drawing.Size(245, 26);
-            this.txt_Datum.TabIndex = 2;
+            this.txtDatum.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtDatum.Location = new System.Drawing.Point(1077, 61);
+            this.txtDatum.Name = "txtDatum";
+            this.txtDatum.Size = new System.Drawing.Size(245, 26);
+            this.txtDatum.TabIndex = 2;
             // 
             // lblVozniRedovi
             // 
@@ -94,7 +94,7 @@
             // 
             // btn_NoviVozniRed
             // 
-            this.btn_NoviVozniRed.Location = new System.Drawing.Point(1120, 197);
+            this.btn_NoviVozniRed.Location = new System.Drawing.Point(1120, 133);
             this.btn_NoviVozniRed.Name = "btn_NoviVozniRed";
             this.btn_NoviVozniRed.Size = new System.Drawing.Size(158, 40);
             this.btn_NoviVozniRed.TabIndex = 5;
@@ -104,7 +104,7 @@
             // 
             // btn_AzurirajVozniRed
             // 
-            this.btn_AzurirajVozniRed.Location = new System.Drawing.Point(1120, 255);
+            this.btn_AzurirajVozniRed.Location = new System.Drawing.Point(1120, 190);
             this.btn_AzurirajVozniRed.Name = "btn_AzurirajVozniRed";
             this.btn_AzurirajVozniRed.Size = new System.Drawing.Size(157, 39);
             this.btn_AzurirajVozniRed.TabIndex = 6;
@@ -247,7 +247,7 @@
             this.Controls.Add(this.btn_AzurirajVozniRed);
             this.Controls.Add(this.btn_NoviVozniRed);
             this.Controls.Add(this.lblVozniRedovi);
-            this.Controls.Add(this.txt_Datum);
+            this.Controls.Add(this.txtDatum);
             this.Controls.Add(this.txtKorime);
             this.Controls.Add(this.lblNaslovApk);
             this.Name = "FrmMain";
@@ -267,7 +267,7 @@
 
         private System.Windows.Forms.Label lblNaslovApk;
         private System.Windows.Forms.TextBox txtKorime;
-        private System.Windows.Forms.TextBox txt_Datum;
+        private System.Windows.Forms.TextBox txtDatum;
         private System.Windows.Forms.Label lblVozniRedovi;
         private System.Windows.Forms.Button btn_NoviVozniRed;
         private System.Windows.Forms.Button btn_AzurirajVozniRed;

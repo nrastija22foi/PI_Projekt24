@@ -5,21 +5,31 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DBLayer;
 using TestoBus.Models;
+using TestoBus.Repozitoriji;
 
 namespace TestoBus
 {
     public partial class FrmMain : Form
     {
+  
         public FrmMain()
         {
             InitializeComponent();
+            UcitajZaposlenika();
             dgvVozniRedovi.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvVozniRedovi.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+        }
+
+        public void UcitajZaposlenika()
+        {
+            txtKorime.Text = RepozitorijRadnik.ImePrezime();
+            txtDatum.Text = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss");
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

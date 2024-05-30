@@ -33,7 +33,7 @@
             this.txt_Az_Polazisna = new System.Windows.Forms.TextBox();
             this.txt_Az_NazivLinije = new System.Windows.Forms.RichTextBox();
             this.txt_Az_Sifra = new System.Windows.Forms.TextBox();
-            this.txt_Datum = new System.Windows.Forms.TextBox();
+            this.txtDatum = new System.Windows.Forms.TextBox();
             this.txtKorime = new System.Windows.Forms.TextBox();
             this.lblNaslovApk = new System.Windows.Forms.Label();
             this.lblSifra = new System.Windows.Forms.Label();
@@ -80,13 +80,13 @@
             this.txt_Az_Sifra.Size = new System.Drawing.Size(433, 26);
             this.txt_Az_Sifra.TabIndex = 23;
             // 
-            // txt_Datum
+            // txtDatum
             // 
-            this.txt_Datum.BackColor = System.Drawing.SystemColors.Menu;
-            this.txt_Datum.Location = new System.Drawing.Point(683, 83);
-            this.txt_Datum.Name = "txt_Datum";
-            this.txt_Datum.Size = new System.Drawing.Size(245, 26);
-            this.txt_Datum.TabIndex = 22;
+            this.txtDatum.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtDatum.Location = new System.Drawing.Point(683, 83);
+            this.txtDatum.Name = "txtDatum";
+            this.txtDatum.Size = new System.Drawing.Size(245, 26);
+            this.txtDatum.TabIndex = 22;
             // 
             // txtKorime
             // 
@@ -160,7 +160,7 @@
             this.btn_Az_Unos.UseVisualStyleBackColor = true;
             this.btn_Az_Unos.Click += new System.EventHandler(this.btn_Az_Unos_Click);
             // 
-            // FormUpdate
+            // FrmUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -171,7 +171,7 @@
             this.Controls.Add(this.txt_Az_Polazisna);
             this.Controls.Add(this.txt_Az_NazivLinije);
             this.Controls.Add(this.txt_Az_Sifra);
-            this.Controls.Add(this.txt_Datum);
+            this.Controls.Add(this.txtDatum);
             this.Controls.Add(this.txtKorime);
             this.Controls.Add(this.lblNaslovApk);
             this.Controls.Add(this.lblSifra);
@@ -180,7 +180,7 @@
             this.Controls.Add(this.lblOdredisna);
             this.Controls.Add(this.lblVrijemeTrajanja);
             this.Controls.Add(this.btn_Az_Unos);
-            this.Name = "FormUpdate";
+            this.Name = "FrmUpdate";
             this.Text = "FormUpdate";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -194,7 +194,7 @@
         private System.Windows.Forms.TextBox txt_Az_Polazisna;
         private System.Windows.Forms.RichTextBox txt_Az_NazivLinije;
         private System.Windows.Forms.TextBox txt_Az_Sifra;
-        private System.Windows.Forms.TextBox txt_Datum;
+        private System.Windows.Forms.TextBox txtDatum;
         private System.Windows.Forms.TextBox txtKorime;
         private System.Windows.Forms.Label lblNaslovApk;
         private System.Windows.Forms.Label lblSifra;

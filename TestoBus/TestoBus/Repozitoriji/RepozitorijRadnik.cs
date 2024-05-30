@@ -5,12 +5,15 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Xml.Linq;
 using TestoBus.Models;
 
 namespace TestoBus.Repozitoriji
 {
     internal class RepozitorijRadnik
     {
+        static Zaposlenik trenutni;
         public static Zaposlenik DohvatiRadnika(string username)
         {
             string sql = $"SELECT * FROM dbo.Zaposlenik WHERE Username ='{username}'";
@@ -52,7 +55,13 @@ namespace TestoBus.Repozitoriji
                 Username = username,
                 Password = password
             };
+            trenutni = zaposlenik;
             return zaposlenik;
+        }
+
+        static public string ImePrezime ()
+        {
+            return $"{trenutni.Ime} {trenutni.Prezime}";
         }
     }
 }
