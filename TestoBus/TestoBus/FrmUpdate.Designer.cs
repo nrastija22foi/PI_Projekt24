@@ -158,7 +158,7 @@
             this.btn_Az_Unos.TabIndex = 14;
             this.btn_Az_Unos.Text = "Azuriraj vozni red";
             this.btn_Az_Unos.UseVisualStyleBackColor = true;
-
+            this.btn_Az_Unos.Click += new System.EventHandler(this.btn_Az_Unos_Click);
             // 
             // FormUpdate
             // 

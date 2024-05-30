@@ -116,6 +116,22 @@ namespace TestoBus.Models
             
         }
 
-       
+        public static void AzurirajVozniRed(int sifraVoznog, string nazivVoznog, string polazisnaStanica, string odredisnaStanica, int vrijemeTrajanja)
+        {
+            string sql = $"UPDATE dbo.VozniRed SET naziv_linije = '{nazivVoznog}', polazisna_stanica = '{polazisnaStanica}',odredisna_stanica = '{odredisnaStanica}',vrijeme_trajanja = {vrijemeTrajanja} WHERE id_voznog_reda = {sifraVoznog}";
+
+            try
+            {
+                DB.OpenConnection();
+                DB.ExecuteCommand(sql);
+                DB.CloseConnection();
+                MessageBox.Show($"Ažuriranje voznog reda sa šifrom {sifraVoznog} je uspešan.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Greška prilikom ažiriranja voznog reda: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
     }
 }
