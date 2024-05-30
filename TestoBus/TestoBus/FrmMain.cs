@@ -99,6 +99,32 @@ namespace TestoBus
             FrmInsert frmInsert = new FrmInsert();
             frmInsert.ShowDialog(); 
         }
+
+        private void btn_AzurirajVozniRed_Click(object sender, EventArgs e)
+        {
+            if (dgvVozniRedovi.CurrentRow == null)
+            {
+                MessageBox.Show("Nijedan red nije selektovan.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            VozniRed oznaceniVozniRed = dgvVozniRedovi.CurrentRow.DataBoundItem as VozniRed;
+            if (oznaceniVozniRed != null)
+            {
+                FrmUpdate Azuriranje = new FrmUpdate(oznaceniVozniRed);
+                Azuriranje.RequestUpdated += FrmUpdate_RequestUpdated;
+                Azuriranje.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Odabrani red nije validan.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void FrmUpdate_RequestUpdated(object sender, EventArgs e)
+        {
+            ShowRequests();
+        }
     }
 
         

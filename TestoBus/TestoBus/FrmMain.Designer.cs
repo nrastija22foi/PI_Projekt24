@@ -110,6 +110,7 @@
             this.btn_AzurirajVozniRed.TabIndex = 6;
             this.btn_AzurirajVozniRed.Text = "Azuriraj vozni red";
             this.btn_AzurirajVozniRed.UseVisualStyleBackColor = true;
+            this.btn_AzurirajVozniRed.Click += new System.EventHandler(this.btn_AzurirajVozniRed_Click);
             // 
             // vozniRedBindingSource
             // 
