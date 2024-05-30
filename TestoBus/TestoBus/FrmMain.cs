@@ -107,7 +107,8 @@ namespace TestoBus
         private void btn_NoviVozniRed_Click(object sender, EventArgs e)
         {
             FrmInsert frmInsert = new FrmInsert();
-            frmInsert.ShowDialog(); 
+            frmInsert.ShowDialog();
+            ShowRequests();
         }
 
         private void btn_AzurirajVozniRed_Click(object sender, EventArgs e)
@@ -129,10 +130,25 @@ namespace TestoBus
             {
                 MessageBox.Show("Odabrani red nije validan.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            ShowRequests();
         }
 
         private void FrmUpdate_RequestUpdated(object sender, EventArgs e)
         {
+            ShowRequests();
+        }
+
+        private void btnBrisi_Click(object sender, EventArgs e)
+        {
+            VozniRed oznaceniVozniRed = dgvVozniRedovi.CurrentRow.DataBoundItem as VozniRed;
+            if (oznaceniVozniRed != null)
+            { 
+                RepozitorijZahtjeva.ObrisiVozniRed(oznaceniVozniRed.Id);
+            }
+            else
+            {
+                MessageBox.Show("Odabrani red nije validan.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             ShowRequests();
         }
     }

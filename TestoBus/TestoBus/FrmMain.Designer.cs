@@ -50,6 +50,7 @@
             this.vrijemetrajanjaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vozniRedBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.btnPonistiFilter = new System.Windows.Forms.Button();
+            this.btnBrisi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.vozniRedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pI2324_nrastija22_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vozniRedBindingSource1)).BeginInit();
@@ -233,12 +234,23 @@
             this.btnPonistiFilter.UseVisualStyleBackColor = true;
             this.btnPonistiFilter.Click += new System.EventHandler(this.btnPonistiFilter_Click);
             // 
+            // btnBrisi
+            // 
+            this.btnBrisi.Location = new System.Drawing.Point(1120, 247);
+            this.btnBrisi.Name = "btnBrisi";
+            this.btnBrisi.Size = new System.Drawing.Size(157, 39);
+            this.btnBrisi.TabIndex = 13;
+            this.btnBrisi.Text = "Obrisi vozni red";
+            this.btnBrisi.UseVisualStyleBackColor = true;
+            this.btnBrisi.Click += new System.EventHandler(this.btnBrisi_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1360, 820);
+            this.Controls.Add(this.btnBrisi);
             this.Controls.Add(this.btnPonistiFilter);
             this.Controls.Add(this.dgvVozniRedovi);
             this.Controls.Add(this.btnPretrazi);
@@ -286,5 +298,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn vrijemetrajanjaDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource vozniRedBindingSource2;
         private System.Windows.Forms.Button btnPonistiFilter;
+        private System.Windows.Forms.Button btnBrisi;
     }
 }
