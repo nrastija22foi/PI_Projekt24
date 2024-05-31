@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.lblNaslovApk = new System.Windows.Forms.Label();
             this.txtKorime = new System.Windows.Forms.TextBox();
             this.txtDatum = new System.Windows.Forms.TextBox();
@@ -51,6 +52,7 @@
             this.vozniRedBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.btnPonistiFilter = new System.Windows.Forms.Button();
             this.btnBrisi = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.vozniRedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pI2324_nrastija22_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vozniRedBindingSource1)).BeginInit();
@@ -61,56 +63,73 @@
             // lblNaslovApk
             // 
             this.lblNaslovApk.AutoSize = true;
-            this.lblNaslovApk.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNaslovApk.Location = new System.Drawing.Point(50, 24);
+            this.lblNaslovApk.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNaslovApk.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblNaslovApk.Location = new System.Drawing.Point(51, 28);
             this.lblNaslovApk.Name = "lblNaslovApk";
-            this.lblNaslovApk.Size = new System.Drawing.Size(283, 69);
+            this.lblNaslovApk.Size = new System.Drawing.Size(299, 70);
             this.lblNaslovApk.TabIndex = 0;
             this.lblNaslovApk.Text = "TestoBus";
             // 
             // txtKorime
             // 
-            this.txtKorime.Location = new System.Drawing.Point(1077, 24);
+            this.txtKorime.BackColor = System.Drawing.Color.GhostWhite;
+            this.txtKorime.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.txtKorime.Location = new System.Drawing.Point(1185, 28);
             this.txtKorime.Name = "txtKorime";
+            this.txtKorime.ReadOnly = true;
             this.txtKorime.Size = new System.Drawing.Size(245, 26);
             this.txtKorime.TabIndex = 1;
+            this.txtKorime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDatum
             // 
-            this.txtDatum.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtDatum.Location = new System.Drawing.Point(1077, 61);
+            this.txtDatum.BackColor = System.Drawing.Color.GhostWhite;
+            this.txtDatum.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.txtDatum.Location = new System.Drawing.Point(1185, 65);
             this.txtDatum.Name = "txtDatum";
+            this.txtDatum.ReadOnly = true;
             this.txtDatum.Size = new System.Drawing.Size(245, 26);
             this.txtDatum.TabIndex = 2;
+            this.txtDatum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblVozniRedovi
             // 
             this.lblVozniRedovi.AutoSize = true;
-            this.lblVozniRedovi.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVozniRedovi.Location = new System.Drawing.Point(55, 247);
+            this.lblVozniRedovi.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVozniRedovi.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblVozniRedovi.Location = new System.Drawing.Point(56, 247);
             this.lblVozniRedovi.Name = "lblVozniRedovi";
-            this.lblVozniRedovi.Size = new System.Drawing.Size(215, 40);
+            this.lblVozniRedovi.Size = new System.Drawing.Size(226, 43);
             this.lblVozniRedovi.TabIndex = 4;
             this.lblVozniRedovi.Text = "Vozni redovi";
             // 
             // btn_NoviVozniRed
             // 
-            this.btn_NoviVozniRed.Location = new System.Drawing.Point(1120, 133);
+            this.btn_NoviVozniRed.BackColor = System.Drawing.Color.OldLace;
+            this.btn_NoviVozniRed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_NoviVozniRed.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_NoviVozniRed.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btn_NoviVozniRed.Location = new System.Drawing.Point(1272, 338);
             this.btn_NoviVozniRed.Name = "btn_NoviVozniRed";
-            this.btn_NoviVozniRed.Size = new System.Drawing.Size(158, 40);
+            this.btn_NoviVozniRed.Size = new System.Drawing.Size(158, 82);
             this.btn_NoviVozniRed.TabIndex = 5;
-            this.btn_NoviVozniRed.Text = "Novi vozni red";
-            this.btn_NoviVozniRed.UseVisualStyleBackColor = true;
+            this.btn_NoviVozniRed.Text = "Unesi novi vozni red";
+            this.btn_NoviVozniRed.UseVisualStyleBackColor = false;
             this.btn_NoviVozniRed.Click += new System.EventHandler(this.btn_NoviVozniRed_Click);
             // 
             // btn_AzurirajVozniRed
             // 
-            this.btn_AzurirajVozniRed.Location = new System.Drawing.Point(1120, 190);
+            this.btn_AzurirajVozniRed.BackColor = System.Drawing.Color.OldLace;
+            this.btn_AzurirajVozniRed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AzurirajVozniRed.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AzurirajVozniRed.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btn_AzurirajVozniRed.Location = new System.Drawing.Point(1272, 512);
             this.btn_AzurirajVozniRed.Name = "btn_AzurirajVozniRed";
-            this.btn_AzurirajVozniRed.Size = new System.Drawing.Size(157, 39);
+            this.btn_AzurirajVozniRed.Size = new System.Drawing.Size(158, 82);
             this.btn_AzurirajVozniRed.TabIndex = 6;
-            this.btn_AzurirajVozniRed.Text = "Azuriraj vozni red";
-            this.btn_AzurirajVozniRed.UseVisualStyleBackColor = true;
+            this.btn_AzurirajVozniRed.Text = "Ažuriraj označeni vozni red";
+            this.btn_AzurirajVozniRed.UseVisualStyleBackColor = false;
             this.btn_AzurirajVozniRed.Click += new System.EventHandler(this.btn_AzurirajVozniRed_Click);
             // 
             // vozniRedBindingSource
@@ -130,17 +149,19 @@
             // lblPretrazivanje
             // 
             this.lblPretrazivanje.AutoSize = true;
-            this.lblPretrazivanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPretrazivanje.Location = new System.Drawing.Point(481, 197);
+            this.lblPretrazivanje.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPretrazivanje.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblPretrazivanje.Location = new System.Drawing.Point(443, 215);
             this.lblPretrazivanje.Name = "lblPretrazivanje";
-            this.lblPretrazivanje.Size = new System.Drawing.Size(189, 32);
+            this.lblPretrazivanje.Size = new System.Drawing.Size(200, 33);
             this.lblPretrazivanje.TabIndex = 8;
-            this.lblPretrazivanje.Text = "Pretrazivanje:";
+            this.lblPretrazivanje.Text = "Pretraživanje:";
             // 
             // txtPretrazivanje
             // 
+            this.txtPretrazivanje.BackColor = System.Drawing.Color.GhostWhite;
             this.txtPretrazivanje.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txtPretrazivanje.Location = new System.Drawing.Point(487, 232);
+            this.txtPretrazivanje.Location = new System.Drawing.Point(658, 205);
             this.txtPretrazivanje.Name = "txtPretrazivanje";
             this.txtPretrazivanje.Size = new System.Drawing.Size(249, 54);
             this.txtPretrazivanje.TabIndex = 9;
@@ -148,12 +169,16 @@
             // 
             // btnPretrazi
             // 
-            this.btnPretrazi.Location = new System.Drawing.Point(742, 232);
+            this.btnPretrazi.BackColor = System.Drawing.Color.OldLace;
+            this.btnPretrazi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPretrazi.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPretrazi.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnPretrazi.Location = new System.Drawing.Point(953, 232);
             this.btnPretrazi.Name = "btnPretrazi";
             this.btnPretrazi.Size = new System.Drawing.Size(149, 55);
             this.btnPretrazi.TabIndex = 10;
             this.btnPretrazi.Text = "Pretraži";
-            this.btnPretrazi.UseVisualStyleBackColor = true;
+            this.btnPretrazi.UseVisualStyleBackColor = false;
             this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
             // 
             // vozniRedBindingSource1
@@ -163,7 +188,12 @@
             // 
             // dgvVozniRedovi
             // 
+            this.dgvVozniRedovi.AllowUserToAddRows = false;
+            this.dgvVozniRedovi.AllowUserToDeleteRows = false;
+            this.dgvVozniRedovi.AllowUserToResizeColumns = false;
+            this.dgvVozniRedovi.AllowUserToResizeRows = false;
             this.dgvVozniRedovi.AutoGenerateColumns = false;
+            this.dgvVozniRedovi.BackgroundColor = System.Drawing.Color.GhostWhite;
             this.dgvVozniRedovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVozniRedovi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idvoznogredaDataGridViewTextBoxColumn,
@@ -172,12 +202,14 @@
             this.odredisnastanicaDataGridViewTextBoxColumn,
             this.vrijemetrajanjaDataGridViewTextBoxColumn});
             this.dgvVozniRedovi.DataSource = this.vozniRedBindingSource;
+            this.dgvVozniRedovi.GridColor = System.Drawing.Color.OldLace;
             this.dgvVozniRedovi.Location = new System.Drawing.Point(63, 305);
             this.dgvVozniRedovi.Name = "dgvVozniRedovi";
             this.dgvVozniRedovi.RowHeadersWidth = 62;
             this.dgvVozniRedovi.RowTemplate.Height = 28;
-            this.dgvVozniRedovi.Size = new System.Drawing.Size(1258, 480);
+            this.dgvVozniRedovi.Size = new System.Drawing.Size(1185, 496);
             this.dgvVozniRedovi.TabIndex = 11;
+            this.dgvVozniRedovi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVozniRedovi_CellContentClick);
             // 
             // idvoznogredaDataGridViewTextBoxColumn
             // 
@@ -226,30 +258,50 @@
             // 
             // btnPonistiFilter
             // 
-            this.btnPonistiFilter.Location = new System.Drawing.Point(742, 182);
+            this.btnPonistiFilter.BackColor = System.Drawing.Color.OldLace;
+            this.btnPonistiFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPonistiFilter.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPonistiFilter.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnPonistiFilter.Location = new System.Drawing.Point(953, 180);
             this.btnPonistiFilter.Name = "btnPonistiFilter";
-            this.btnPonistiFilter.Size = new System.Drawing.Size(148, 46);
+            this.btnPonistiFilter.Size = new System.Drawing.Size(149, 46);
             this.btnPonistiFilter.TabIndex = 12;
             this.btnPonistiFilter.Text = "Poništi";
-            this.btnPonistiFilter.UseVisualStyleBackColor = true;
+            this.btnPonistiFilter.UseVisualStyleBackColor = false;
             this.btnPonistiFilter.Click += new System.EventHandler(this.btnPonistiFilter_Click);
             // 
             // btnBrisi
             // 
-            this.btnBrisi.Location = new System.Drawing.Point(1120, 247);
+            this.btnBrisi.BackColor = System.Drawing.Color.OldLace;
+            this.btnBrisi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBrisi.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrisi.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnBrisi.Location = new System.Drawing.Point(1272, 691);
             this.btnBrisi.Name = "btnBrisi";
-            this.btnBrisi.Size = new System.Drawing.Size(157, 39);
+            this.btnBrisi.Size = new System.Drawing.Size(158, 82);
             this.btnBrisi.TabIndex = 13;
-            this.btnBrisi.Text = "Obrisi vozni red";
-            this.btnBrisi.UseVisualStyleBackColor = true;
+            this.btnBrisi.Text = "Obriši označeni vozni red";
+            this.btnBrisi.UseVisualStyleBackColor = false;
             this.btnBrisi.Click += new System.EventHandler(this.btnBrisi_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(-29, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(2494, 32);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "─────────────────────────────────────────────────────────────────────────────────" +
+    "───────────────────────────────────────────";
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1360, 820);
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(1455, 862);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBrisi);
             this.Controls.Add(this.btnPonistiFilter);
             this.Controls.Add(this.dgvVozniRedovi);
@@ -262,8 +314,13 @@
             this.Controls.Add(this.txtDatum);
             this.Controls.Add(this.txtKorime);
             this.Controls.Add(this.lblNaslovApk);
+            this.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmMain";
-            this.Text = "Form1";
+            this.Text = "TestoBus HR";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.vozniRedBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pI2324_nrastija22_DBDataSet)).EndInit();
@@ -299,5 +356,6 @@
         private System.Windows.Forms.BindingSource vozniRedBindingSource2;
         private System.Windows.Forms.Button btnPonistiFilter;
         private System.Windows.Forms.Button btnBrisi;
+        private System.Windows.Forms.Label label1;
     }
 }

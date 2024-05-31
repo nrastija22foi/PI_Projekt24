@@ -180,8 +180,12 @@
             this.Controls.Add(this.lblOdredisna);
             this.Controls.Add(this.lblVrijemeTrajanja);
             this.Controls.Add(this.btnUnos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmInsert";
-            this.Text = "FrmInsert";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "TestoBus Unos";
             this.Load += new System.EventHandler(this.FrmInsert_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

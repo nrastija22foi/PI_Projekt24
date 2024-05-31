@@ -180,8 +180,11 @@
             this.Controls.Add(this.lblOdredisna);
             this.Controls.Add(this.lblVrijemeTrajanja);
             this.Controls.Add(this.btn_Az_Unos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmUpdate";
-            this.Text = "FormUpdate";
+            this.Text = "TestoBus Ažuriranje";
             this.ResumeLayout(false);
             this.PerformLayout();
 

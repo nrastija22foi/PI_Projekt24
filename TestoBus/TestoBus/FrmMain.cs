@@ -17,18 +17,29 @@ namespace TestoBus
 {
     public partial class FrmMain : Form
     {
-  
+        private Timer timer;
         public FrmMain()
         {
             InitializeComponent();
             UcitajZaposlenika();
             dgvVozniRedovi.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvVozniRedovi.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            timer = new Timer();
+            timer.Interval = 1000; // Interval od 1 sekunde (1000 milisekundi)
+            timer.Tick += new EventHandler(Timer_Tick);
+            timer.Start();
+
         }
+
 
         public void UcitajZaposlenika()
         {
             txtKorime.Text = RepozitorijRadnik.ImePrezime();
+            txtDatum.Text = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss");
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            // Ažurirajte TextBox sa trenutnim vremenom
             txtDatum.Text = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss");
         }
 
@@ -39,6 +50,7 @@ namespace TestoBus
         private void FrmMain_Load(object sender, EventArgs e)
         {
             ShowRequests();
+            this.ActiveControl = txtPretrazivanje;
         }
 
         private void ShowRequests()
@@ -74,8 +86,16 @@ namespace TestoBus
 
         private void btnPretrazi_Click(object sender, EventArgs e)
         {
-            string tekstPretrage = txtPretrazivanje.Text;
-            List<VozniRed> PretrazivanjeVoznihRedova = RepozitorijZahtjeva.PretraziVozneRedove(tekstPretrage); 
+            string tekstPretrage = txtPretrazivanje.Text.Trim();
+
+            if (string.IsNullOrEmpty(tekstPretrage))
+            {
+                MessageBox.Show("Unesite tekst za pretraživanje!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            List<VozniRed> PretrazivanjeVoznihRedova = RepozitorijZahtjeva.PretraziVozneRedove(tekstPretrage);
 
             if (PretrazivanjeVoznihRedova.Count == 0)
             {
@@ -88,7 +108,7 @@ namespace TestoBus
             }
         }
 
-        private void btnPonistiFilter_Click(object sender, EventArgs e)
+            private void btnPonistiFilter_Click(object sender, EventArgs e)
         {
             string tekstPretrage = "reset";
             List<VozniRed> PretrazivanjeVoznihRedova = RepozitorijZahtjeva.PretraziVozneRedove(tekstPretrage);
@@ -150,6 +170,11 @@ namespace TestoBus
                 MessageBox.Show("Odabrani red nije validan.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             ShowRequests();
+        }
+
+        private void dgvVozniRedovi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 
