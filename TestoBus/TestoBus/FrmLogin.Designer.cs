@@ -61,6 +61,8 @@
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.Color.GhostWhite;
+            this.txtUsername.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.MidnightBlue;
             this.txtUsername.Location = new System.Drawing.Point(190, 56);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(217, 26);
@@ -69,6 +71,8 @@
             // txtPassword
             // 
             this.txtPassword.BackColor = System.Drawing.Color.GhostWhite;
+            this.txtPassword.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.MidnightBlue;
             this.txtPassword.Location = new System.Drawing.Point(190, 103);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';

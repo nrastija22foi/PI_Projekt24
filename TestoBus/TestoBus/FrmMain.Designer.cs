@@ -74,6 +74,7 @@
             // txtKorime
             // 
             this.txtKorime.BackColor = System.Drawing.Color.GhostWhite;
+            this.txtKorime.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKorime.ForeColor = System.Drawing.Color.MidnightBlue;
             this.txtKorime.Location = new System.Drawing.Point(1185, 28);
             this.txtKorime.Name = "txtKorime";
@@ -85,6 +86,7 @@
             // txtDatum
             // 
             this.txtDatum.BackColor = System.Drawing.Color.GhostWhite;
+            this.txtDatum.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDatum.ForeColor = System.Drawing.Color.MidnightBlue;
             this.txtDatum.Location = new System.Drawing.Point(1185, 65);
             this.txtDatum.Name = "txtDatum";
@@ -160,7 +162,8 @@
             // txtPretrazivanje
             // 
             this.txtPretrazivanje.BackColor = System.Drawing.Color.GhostWhite;
-            this.txtPretrazivanje.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txtPretrazivanje.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPretrazivanje.ForeColor = System.Drawing.Color.MidnightBlue;
             this.txtPretrazivanje.Location = new System.Drawing.Point(658, 205);
             this.txtPretrazivanje.Name = "txtPretrazivanje";
             this.txtPretrazivanje.Size = new System.Drawing.Size(249, 54);
@@ -288,6 +291,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label1.Location = new System.Drawing.Point(-29, 98);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(2494, 32);
