@@ -44,6 +44,8 @@
             this.txtOdredisna = new System.Windows.Forms.TextBox();
             this.txtVrijeme = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblAutobus = new System.Windows.Forms.Label();
+            this.cmbAutobus = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnUnos
@@ -52,7 +54,7 @@
             this.btnUnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUnos.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUnos.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnUnos.Location = new System.Drawing.Point(385, 561);
+            this.btnUnos.Location = new System.Drawing.Point(355, 636);
             this.btnUnos.Name = "btnUnos";
             this.btnUnos.Size = new System.Drawing.Size(253, 70);
             this.btnUnos.TabIndex = 0;
@@ -66,7 +68,7 @@
             this.lblVrijemeTrajanja.BackColor = System.Drawing.Color.Transparent;
             this.lblVrijemeTrajanja.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVrijemeTrajanja.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblVrijemeTrajanja.Location = new System.Drawing.Point(122, 506);
+            this.lblVrijemeTrajanja.Location = new System.Drawing.Point(127, 474);
             this.lblVrijemeTrajanja.Name = "lblVrijemeTrajanja";
             this.lblVrijemeTrajanja.Size = new System.Drawing.Size(131, 19);
             this.lblVrijemeTrajanja.TabIndex = 1;
@@ -78,7 +80,7 @@
             this.lblOdredisna.BackColor = System.Drawing.Color.Transparent;
             this.lblOdredisna.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOdredisna.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblOdredisna.Location = new System.Drawing.Point(118, 447);
+            this.lblOdredisna.Location = new System.Drawing.Point(127, 415);
             this.lblOdredisna.Name = "lblOdredisna";
             this.lblOdredisna.Size = new System.Drawing.Size(153, 19);
             this.lblOdredisna.TabIndex = 2;
@@ -90,7 +92,7 @@
             this.lblPolazišna.BackColor = System.Drawing.Color.Transparent;
             this.lblPolazišna.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPolazišna.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblPolazišna.Location = new System.Drawing.Point(118, 387);
+            this.lblPolazišna.Location = new System.Drawing.Point(127, 355);
             this.lblPolazišna.Name = "lblPolazišna";
             this.lblPolazišna.Size = new System.Drawing.Size(149, 19);
             this.lblPolazišna.TabIndex = 3;
@@ -102,7 +104,7 @@
             this.lblNazivLinije.BackColor = System.Drawing.Color.Transparent;
             this.lblNazivLinije.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNazivLinije.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblNazivLinije.Location = new System.Drawing.Point(144, 289);
+            this.lblNazivLinije.Location = new System.Drawing.Point(153, 257);
             this.lblNazivLinije.Name = "lblNazivLinije";
             this.lblNazivLinije.Size = new System.Drawing.Size(97, 19);
             this.lblNazivLinije.TabIndex = 4;
@@ -114,7 +116,7 @@
             this.lblSifra.BackColor = System.Drawing.Color.Transparent;
             this.lblSifra.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSifra.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblSifra.Location = new System.Drawing.Point(122, 215);
+            this.lblSifra.Location = new System.Drawing.Point(131, 183);
             this.lblSifra.Name = "lblSifra";
             this.lblSifra.Size = new System.Drawing.Size(150, 19);
             this.lblSifra.TabIndex = 5;
@@ -159,7 +161,7 @@
             this.txtSifra.BackColor = System.Drawing.Color.GhostWhite;
             this.txtSifra.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSifra.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.txtSifra.Location = new System.Drawing.Point(293, 208);
+            this.txtSifra.Location = new System.Drawing.Point(302, 176);
             this.txtSifra.Name = "txtSifra";
             this.txtSifra.Size = new System.Drawing.Size(433, 26);
             this.txtSifra.TabIndex = 9;
@@ -169,7 +171,7 @@
             this.txtNazivLinije.BackColor = System.Drawing.Color.GhostWhite;
             this.txtNazivLinije.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNazivLinije.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.txtNazivLinije.Location = new System.Drawing.Point(293, 249);
+            this.txtNazivLinije.Location = new System.Drawing.Point(302, 217);
             this.txtNazivLinije.Name = "txtNazivLinije";
             this.txtNazivLinije.Size = new System.Drawing.Size(433, 94);
             this.txtNazivLinije.TabIndex = 10;
@@ -180,7 +182,7 @@
             this.txtPolazisna.BackColor = System.Drawing.Color.GhostWhite;
             this.txtPolazisna.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPolazisna.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.txtPolazisna.Location = new System.Drawing.Point(293, 383);
+            this.txtPolazisna.Location = new System.Drawing.Point(302, 351);
             this.txtPolazisna.Name = "txtPolazisna";
             this.txtPolazisna.Size = new System.Drawing.Size(433, 26);
             this.txtPolazisna.TabIndex = 11;
@@ -190,7 +192,7 @@
             this.txtOdredisna.BackColor = System.Drawing.Color.GhostWhite;
             this.txtOdredisna.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOdredisna.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.txtOdredisna.Location = new System.Drawing.Point(293, 440);
+            this.txtOdredisna.Location = new System.Drawing.Point(302, 408);
             this.txtOdredisna.Name = "txtOdredisna";
             this.txtOdredisna.Size = new System.Drawing.Size(433, 26);
             this.txtOdredisna.TabIndex = 12;
@@ -200,7 +202,7 @@
             this.txtVrijeme.BackColor = System.Drawing.Color.GhostWhite;
             this.txtVrijeme.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVrijeme.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.txtVrijeme.Location = new System.Drawing.Point(293, 499);
+            this.txtVrijeme.Location = new System.Drawing.Point(302, 467);
             this.txtVrijeme.Name = "txtVrijeme";
             this.txtVrijeme.Size = new System.Drawing.Size(433, 26);
             this.txtVrijeme.TabIndex = 13;
@@ -216,12 +218,37 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "──────────────────────────────────────────────────";
             // 
+            // lblAutobus
+            // 
+            this.lblAutobus.AutoSize = true;
+            this.lblAutobus.BackColor = System.Drawing.Color.Transparent;
+            this.lblAutobus.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAutobus.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblAutobus.Location = new System.Drawing.Point(131, 544);
+            this.lblAutobus.Name = "lblAutobus";
+            this.lblAutobus.Size = new System.Drawing.Size(259, 19);
+            this.lblAutobus.TabIndex = 16;
+            this.lblAutobus.Text = "Registracijska oznaka autobusa:";
+            // 
+            // cmbAutobus
+            // 
+            this.cmbAutobus.BackColor = System.Drawing.Color.GhostWhite;
+            this.cmbAutobus.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAutobus.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.cmbAutobus.FormattingEnabled = true;
+            this.cmbAutobus.Location = new System.Drawing.Point(456, 541);
+            this.cmbAutobus.Name = "cmbAutobus";
+            this.cmbAutobus.Size = new System.Drawing.Size(279, 27);
+            this.cmbAutobus.TabIndex = 17;
+            // 
             // FrmInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(971, 661);
+            this.ClientSize = new System.Drawing.Size(992, 732);
+            this.Controls.Add(this.cmbAutobus);
+            this.Controls.Add(this.lblAutobus);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtVrijeme);
             this.Controls.Add(this.txtOdredisna);
@@ -267,5 +294,7 @@
         private System.Windows.Forms.TextBox txtOdredisna;
         private System.Windows.Forms.TextBox txtVrijeme;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAutobus;
+        private System.Windows.Forms.ComboBox cmbAutobus;
     }
 }

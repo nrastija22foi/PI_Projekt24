@@ -1,6 +1,7 @@
 ﻿using DBLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
@@ -82,6 +83,7 @@ namespace TestoBus.Models
             string polazisna = reader["polazisna_stanica"].ToString();
             string odredisna = reader["odredisna_stanica"].ToString();
             int vrijeme = int.Parse(reader["vrijeme_trajanja"].ToString());
+            string autobus = reader["registracijska_oznaka"].ToString();
             var novi = new VozniRed
             {
                 Id = id,
@@ -89,18 +91,18 @@ namespace TestoBus.Models
                 Polazisna = polazisna,
                 Odredisna = odredisna,
                 Vrijeme = vrijeme,
+                Autobus = autobus
             };
             return novi;
         }
 
-        public static void UnesiVozniRed(string sifraVoznog, string nazivVoznog, string polazisnaStanica, string odredisnaStanica, string vrijemeTrajanja)
+        public static void UnesiVozniRed(string sifraVoznog, string nazivVoznog, string polazisnaStanica, string odredisnaStanica, string vrijemeTrajanja, string registracijskaOznaka)
         {
             int sifra = Convert.ToInt32(sifraVoznog);
             int vrijeme = Convert.ToInt32(vrijemeTrajanja);
 
-
-            string sql = $"INSERT INTO dbo.VozniRed (id_voznog_reda, naziv_linije, polazisna_stanica, odredisna_stanica, vrijeme_trajanja) " +
-            $"VALUES ({sifra}, '{nazivVoznog}', '{polazisnaStanica}', '{odredisnaStanica}', {vrijeme})";
+            string sql = $"INSERT INTO dbo.VozniRed (id_voznog_reda, naziv_linije, polazisna_stanica, odredisna_stanica, vrijeme_trajanja, registracijska_oznaka) " +
+                         $"VALUES ({sifra}, '{nazivVoznog}', '{polazisnaStanica}', '{odredisnaStanica}', {vrijeme}, '{registracijskaOznaka}')";
 
             try
             {
@@ -113,26 +115,25 @@ namespace TestoBus.Models
             {
                 MessageBox.Show($"Greška prilikom unosa voznog reda: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-        public static void AzurirajVozniRed(int sifraVoznog, string nazivVoznog, string polazisnaStanica, string odredisnaStanica, int vrijemeTrajanja)
+        public static void AzurirajVozniRed(int sifraVoznog, string nazivVoznog, string polazisnaStanica, string odredisnaStanica, int vrijemeTrajanja, string registracijskaOznaka)
         {
-            string sql = $"UPDATE dbo.VozniRed SET naziv_linije = '{nazivVoznog}', polazisna_stanica = '{polazisnaStanica}',odredisna_stanica = '{odredisnaStanica}',vrijeme_trajanja = {vrijemeTrajanja} WHERE id_voznog_reda = {sifraVoznog}";
+            string sql = $"UPDATE dbo.VozniRed SET naziv_linije = '{nazivVoznog}', polazisna_stanica = '{polazisnaStanica}', odredisna_stanica = '{odredisnaStanica}', vrijeme_trajanja = {vrijemeTrajanja}, registracijska_oznaka = '{registracijskaOznaka}' WHERE id_voznog_reda = {sifraVoznog}";
 
             try
             {
                 DB.OpenConnection();
                 DB.ExecuteCommand(sql);
                 DB.CloseConnection();
-                MessageBox.Show($"Ažuriranje voznog reda sa šifrom {sifraVoznog} je uspešan.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Ažuriranje voznog reda sa šifrom {sifraVoznog} je uspešno.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Greška prilikom ažiriranja voznog reda: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Greška prilikom ažuriranja voznog reda: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
+
         public static void ObrisiVozniRed(int sifra)
         {
             string sql = $"DELETE FROM dbo.VozniRed WHERE id_voznog_reda = {sifra}";
@@ -147,6 +148,23 @@ namespace TestoBus.Models
             {
                 MessageBox.Show($"Greška prilikom brisanja voznog reda: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public static List<string> GetRegistracijskeOznake()
+        {
+            List<string> registracijskeOznake = new List<string>();
+
+            string sql = "SELECT registracijska_oznaka FROM dbo.Vozilo";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    registracijskeOznake.Add(reader["registracijska_oznaka"].ToString());
+                }
+            }
+            return registracijskeOznake;
         }
     }
 }

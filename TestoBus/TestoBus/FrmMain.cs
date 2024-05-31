@@ -64,15 +64,6 @@ namespace TestoBus
             dgvVozniRedovi.AutoGenerateColumns = true;
             dgvVozniRedovi.DataSource = vozniRedovi;
 
-            /*dgvVozniRedovi.DefaultCellStyle.BackColor = Color.FromArgb(44, 44, 44);
-            dgvVozniRedovi.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(44, 44, 44);
-            dgvVozniRedovi.DefaultCellStyle.ForeColor = Color.White;
-            dgvVozniRedovi.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(44, 44, 44);
-            dgvVozniRedovi.DefaultCellStyle.SelectionBackColor = Color.FromArgb(194, 214, 224);
-            dgvVozniRedovi.DefaultCellStyle.SelectionForeColor = Color.Black;
-            dgvVozniRedovi.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(44, 44, 44);
-            dgvVozniRedovi.RowHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(194, 214, 224);*/
-
             dgvVozniRedovi.EnableHeadersVisualStyles = false;
             dgvVozniRedovi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
@@ -81,6 +72,7 @@ namespace TestoBus
             dgvVozniRedovi.Columns["Polazisna"].HeaderText = "Polazišna stanica";
             dgvVozniRedovi.Columns["Odredisna"].HeaderText = "Odredišna stanica";
             dgvVozniRedovi.Columns["Vrijeme"].HeaderText = "Vrijeme trajanja vožnje";
+            dgvVozniRedovi.Columns["Autobus"].HeaderText = "Autobus";
             
         }
 

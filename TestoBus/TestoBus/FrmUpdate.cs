@@ -25,7 +25,9 @@ namespace TestoBus
             vozni.Polazisna = oznaceni.Polazisna;
             vozni.Odredisna = oznaceni.Odredisna;
             vozni.Vrijeme = oznaceni.Vrijeme;
+            vozni.Autobus = oznaceni.Autobus;
 
+            UcitajRegistracijskeOznake(); // Učitavanje registracijskih oznaka
             UcitajZaposlenika();
             PrikazVoznogReda();
         }
@@ -35,6 +37,11 @@ namespace TestoBus
             txtDatum.Text = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss");
         }
 
+        private void UcitajRegistracijskeOznake()
+        {
+            List<string> registracijskeOznake = RepozitorijZahtjeva.GetRegistracijskeOznake();
+            cmb_Az_Autobus.DataSource = registracijskeOznake;
+        }
 
         private void PrikazVoznogReda()
         {
@@ -43,6 +50,7 @@ namespace TestoBus
             txt_Az_Polazisna.Text = Convert.ToString(vozni.Polazisna);
             txt_Az_Odredisna.Text = Convert.ToString(vozni.Odredisna);
             txt_Az_Vrijeme.Text = Convert.ToString(vozni.Vrijeme);
+            cmb_Az_Autobus.Text = Convert.ToString(vozni.Autobus);
         }
 
         private void btn_Az_Unos_Click(object sender, EventArgs e)
@@ -52,8 +60,9 @@ namespace TestoBus
             string polazisna = txt_Az_Polazisna.Text;
             string odredisna = txt_Az_Odredisna.Text;
             int vrijeme = Convert.ToInt32(txt_Az_Vrijeme.Text);
+            string registracija = cmb_Az_Autobus.Text;
 
-            RepozitorijZahtjeva.AzurirajVozniRed(sifra, naziv, polazisna, odredisna, vrijeme);
+            RepozitorijZahtjeva.AzurirajVozniRed(sifra, naziv, polazisna, odredisna, vrijeme, registracija);
             RequestUpdated?.Invoke(this, EventArgs.Empty);
             Close();
         }

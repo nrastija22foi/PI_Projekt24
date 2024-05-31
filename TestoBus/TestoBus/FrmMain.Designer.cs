@@ -112,7 +112,7 @@
             this.btn_NoviVozniRed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_NoviVozniRed.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_NoviVozniRed.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btn_NoviVozniRed.Location = new System.Drawing.Point(1272, 338);
+            this.btn_NoviVozniRed.Location = new System.Drawing.Point(1458, 378);
             this.btn_NoviVozniRed.Name = "btn_NoviVozniRed";
             this.btn_NoviVozniRed.Size = new System.Drawing.Size(158, 82);
             this.btn_NoviVozniRed.TabIndex = 5;
@@ -126,7 +126,7 @@
             this.btn_AzurirajVozniRed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AzurirajVozniRed.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AzurirajVozniRed.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btn_AzurirajVozniRed.Location = new System.Drawing.Point(1272, 512);
+            this.btn_AzurirajVozniRed.Location = new System.Drawing.Point(1458, 544);
             this.btn_AzurirajVozniRed.Name = "btn_AzurirajVozniRed";
             this.btn_AzurirajVozniRed.Size = new System.Drawing.Size(158, 82);
             this.btn_AzurirajVozniRed.TabIndex = 6;
@@ -210,7 +210,7 @@
             this.dgvVozniRedovi.Name = "dgvVozniRedovi";
             this.dgvVozniRedovi.RowHeadersWidth = 62;
             this.dgvVozniRedovi.RowTemplate.Height = 28;
-            this.dgvVozniRedovi.Size = new System.Drawing.Size(1185, 496);
+            this.dgvVozniRedovi.Size = new System.Drawing.Size(1367, 507);
             this.dgvVozniRedovi.TabIndex = 11;
             this.dgvVozniRedovi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVozniRedovi_CellContentClick);
             // 
@@ -279,7 +279,7 @@
             this.btnBrisi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBrisi.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBrisi.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnBrisi.Location = new System.Drawing.Point(1272, 691);
+            this.btnBrisi.Location = new System.Drawing.Point(1458, 709);
             this.btnBrisi.Name = "btnBrisi";
             this.btnBrisi.Size = new System.Drawing.Size(158, 82);
             this.btnBrisi.TabIndex = 13;
@@ -304,7 +304,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1455, 862);
+            this.ClientSize = new System.Drawing.Size(1659, 957);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBrisi);
             this.Controls.Add(this.btnPonistiFilter);

@@ -19,5 +19,7 @@ namespace TestoBus.Models
 
         public int Vrijeme { get; set; }
 
+        public string Autobus { get; set; } 
+
     }
 }

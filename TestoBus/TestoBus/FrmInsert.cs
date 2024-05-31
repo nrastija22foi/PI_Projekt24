@@ -10,22 +10,31 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using TestoBus.Models;
 using TestoBus.Repozitoriji;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TestoBus
 {
     public partial class FrmInsert : Form
-    {
-        
+    { 
         public FrmInsert()
         {
             InitializeComponent();
             UcitajZaposlenika();
+            LoadRegistracijskeOznake();
         }
 
         public void UcitajZaposlenika()
         {
             txtKorime.Text = RepozitorijRadnik.ImePrezime();
             txtDatum.Text = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss");
+        }
+
+
+        private void LoadRegistracijskeOznake()
+        {
+            List<string> dt = RepozitorijZahtjeva.GetRegistracijskeOznake();
+            cmbAutobus.DataSource = dt;
+            cmbAutobus.DisplayMember = "RegistracijskaOznaka";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -45,8 +54,9 @@ namespace TestoBus
             string polazisnaStanica = txtPolazisna.Text;
             string odredisnaStanica = txtOdredisna.Text;
             string vrijemeTrajanja = txtVrijeme.Text;
-
-            RepozitorijZahtjeva.UnesiVozniRed(sifraVoznog, nazivVoznog, polazisnaStanica, odredisnaStanica, vrijemeTrajanja);
+            string registracija = cmbAutobus.Text;
+            MessageBox.Show(registracija);
+            RepozitorijZahtjeva.UnesiVozniRed(sifraVoznog, nazivVoznog, polazisnaStanica, odredisnaStanica, vrijemeTrajanja, registracija);
 
             this.Close();
         }
