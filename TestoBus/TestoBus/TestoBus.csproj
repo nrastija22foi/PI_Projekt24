@@ -109,6 +109,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="PI2324_nrastija22_DBDataSet.xsc">
       <DependentUpon>PI2324_nrastija22_DBDataSet.xsd</DependentUpon>
@@ -136,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DLLs\DBLayer.dll" />
+    <None Include="Resources\TestoBus Logo Okrugli.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

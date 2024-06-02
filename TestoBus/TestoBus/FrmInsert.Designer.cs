@@ -46,6 +46,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblAutobus = new System.Windows.Forms.Label();
             this.cmbAutobus = new System.Windows.Forms.ComboBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnUnos
@@ -241,12 +243,26 @@
             this.cmbAutobus.Size = new System.Drawing.Size(279, 27);
             this.cmbAutobus.TabIndex = 17;
             // 
+            // picLogo
+            // 
+            this.picLogo.BackColor = System.Drawing.Color.AliceBlue;
+            this.picLogo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.picLogo.Image = global::TestoBus.Properties.Resources.TestoBus_Logo_Okrugli;
+            this.picLogo.InitialImage = global::TestoBus.Properties.Resources.TestoBus_Logo_Okrugli;
+            this.picLogo.Location = new System.Drawing.Point(795, 298);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(158, 150);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 18;
+            this.picLogo.TabStop = false;
+            // 
             // FrmInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(992, 732);
+            this.Controls.Add(this.picLogo);
             this.Controls.Add(this.cmbAutobus);
             this.Controls.Add(this.lblAutobus);
             this.Controls.Add(this.label1);
@@ -272,6 +288,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TestoBus Azuriranje";
             this.Load += new System.EventHandler(this.FrmInsert_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,5 +313,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblAutobus;
         private System.Windows.Forms.ComboBox cmbAutobus;
+        private System.Windows.Forms.PictureBox picLogo;
     }
 }

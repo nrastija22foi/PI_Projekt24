@@ -98,6 +98,13 @@ namespace TestoBus.Models
 
         public static void UnesiVozniRed(string sifraVoznog, string nazivVoznog, string polazisnaStanica, string odredisnaStanica, string vrijemeTrajanja, string registracijskaOznaka)
         {
+            
+            if (!System.Text.RegularExpressions.Regex.IsMatch(sifraVoznog, @"^\d+$") || !System.Text.RegularExpressions.Regex.IsMatch(vrijemeTrajanja, @"^\d+$"))
+            {
+                MessageBox.Show("Vrijeme trajanja i šifra mogu sadržavati samo brojeve!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             int sifra = Convert.ToInt32(sifraVoznog);
             int vrijeme = Convert.ToInt32(vrijemeTrajanja);
 

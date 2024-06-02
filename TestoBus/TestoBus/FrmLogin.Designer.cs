@@ -34,6 +34,8 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -93,13 +95,27 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // picLogo
+            // 
+            this.picLogo.BackColor = System.Drawing.Color.AliceBlue;
+            this.picLogo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.picLogo.Image = global::TestoBus.Properties.Resources.TestoBus_Logo_Okrugli;
+            this.picLogo.InitialImage = global::TestoBus.Properties.Resources.TestoBus_Logo_Okrugli;
+            this.picLogo.Location = new System.Drawing.Point(450, 25);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(158, 150);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 17;
+            this.picLogo.TabStop = false;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(489, 255);
+            this.ClientSize = new System.Drawing.Size(642, 256);
+            this.Controls.Add(this.picLogo);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
@@ -115,6 +131,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TestoBus Prijava";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,6 +144,7 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.PictureBox picLogo;
     }
 }
 

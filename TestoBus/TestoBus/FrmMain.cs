@@ -28,7 +28,6 @@ namespace TestoBus
             timer.Interval = 1000; // Interval od 1 sekunde (1000 milisekundi)
             timer.Tick += new EventHandler(Timer_Tick);
             timer.Start();
-
         }
 
 
@@ -73,7 +72,7 @@ namespace TestoBus
             dgvVozniRedovi.Columns["Odredisna"].HeaderText = "Odredišna stanica";
             dgvVozniRedovi.Columns["Vrijeme"].HeaderText = "Vrijeme trajanja vožnje";
             dgvVozniRedovi.Columns["Autobus"].HeaderText = "Autobus";
-            
+            dgvVozniRedovi.ReadOnly = true; 
         }
 
         private void btnPretrazi_Click(object sender, EventArgs e)
@@ -86,21 +85,36 @@ namespace TestoBus
                 return;
             }
 
-
-            List<VozniRed> PretrazivanjeVoznihRedova = RepozitorijZahtjeva.PretraziVozneRedove(tekstPretrage);
-
-            if (PretrazivanjeVoznihRedova.Count == 0)
+            // Provera da li tekst sadrži samo brojeve
+            if (!System.Text.RegularExpressions.Regex.IsMatch(tekstPretrage, @"^\d+$"))
             {
-                MessageBox.Show("Nije pronađen ni jedan upis!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Unos može sadržavati samo brojeve!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+
+            List<VozniRed> PretrazivanjeVoznihRedova = new List<VozniRed>();
+
+            try
             {
-                dgvVozniRedovi.DataSource = PretrazivanjeVoznihRedova;
-                dgvVozniRedovi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                PretrazivanjeVoznihRedova = RepozitorijZahtjeva.PretraziVozneRedove(tekstPretrage);
+
+                if (PretrazivanjeVoznihRedova.Count == 0)
+                {
+                    MessageBox.Show("Nije pronađen ni jedan upis!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    dgvVozniRedovi.DataSource = PretrazivanjeVoznihRedova;
+                    dgvVozniRedovi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Došlo je do greške prilikom pretrage: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-            private void btnPonistiFilter_Click(object sender, EventArgs e)
+        private void btnPonistiFilter_Click(object sender, EventArgs e)
         {
             string tekstPretrage = "reset";
             List<VozniRed> PretrazivanjeVoznihRedova = RepozitorijZahtjeva.PretraziVozneRedove(tekstPretrage);
@@ -165,6 +179,16 @@ namespace TestoBus
         }
 
         private void dgvVozniRedovi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtKorime_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDatum_TextChanged(object sender, EventArgs e)
         {
 
         }

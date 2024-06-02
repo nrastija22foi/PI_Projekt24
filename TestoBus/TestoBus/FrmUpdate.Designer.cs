@@ -46,6 +46,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmb_Az_Autobus = new System.Windows.Forms.ComboBox();
             this.lblAutobus = new System.Windows.Forms.Label();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_Az_Vrijeme
@@ -235,12 +237,26 @@
             this.lblAutobus.TabIndex = 29;
             this.lblAutobus.Text = "Registracijska oznaka autobusa:";
             // 
+            // picLogo
+            // 
+            this.picLogo.BackColor = System.Drawing.Color.AliceBlue;
+            this.picLogo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.picLogo.Image = global::TestoBus.Properties.Resources.TestoBus_Logo_Okrugli;
+            this.picLogo.InitialImage = global::TestoBus.Properties.Resources.TestoBus_Logo_Okrugli;
+            this.picLogo.Location = new System.Drawing.Point(800, 298);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(158, 150);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 31;
+            this.picLogo.TabStop = false;
+            // 
             // FrmUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(997, 742);
+            this.Controls.Add(this.picLogo);
             this.Controls.Add(this.cmb_Az_Autobus);
             this.Controls.Add(this.lblAutobus);
             this.Controls.Add(this.label1);
@@ -264,6 +280,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmUpdate";
             this.Text = "TestoBus Ažuriranje";
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,5 +305,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmb_Az_Autobus;
         private System.Windows.Forms.Label lblAutobus;
+        private System.Windows.Forms.PictureBox picLogo;
     }
 }

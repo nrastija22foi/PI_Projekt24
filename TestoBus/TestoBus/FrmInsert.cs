@@ -55,7 +55,6 @@ namespace TestoBus
             string odredisnaStanica = txtOdredisna.Text;
             string vrijemeTrajanja = txtVrijeme.Text;
             string registracija = cmbAutobus.Text;
-            MessageBox.Show(registracija);
             RepozitorijZahtjeva.UnesiVozniRed(sifraVoznog, nazivVoznog, polazisnaStanica, odredisnaStanica, vrijemeTrajanja, registracija);
 
             this.Close();
